@@ -3,7 +3,7 @@
 # Starting method
 def start():
     while True:
-        program = int(input("Select program (1: Simple two-number calculator; 2: Temperature converter (Celsius --> Fahrenheit); 3: Student's grades average): "))
+        program = int(input("Select program (1: Simple two-number calculator; 2: Temperature converter (Celsius --> Fahrenheit); 3: Student's grades average; 4: End the program): "))
 
         if program == 1:
             calc()
@@ -11,6 +11,8 @@ def start():
             tempConverter()
         elif program == 3:
             gradesAverage()
+        elif program == 4:
+            return
         else:
             start()
 
