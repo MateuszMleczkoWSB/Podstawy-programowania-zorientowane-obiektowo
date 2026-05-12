@@ -23,7 +23,8 @@ def calc():
             result = num1 / num2
             print(f"Result: {result}")
     else:
-        print("Wrong operation number")
+        print("Wrong operation selected")
+        calc()
 
 
 # Temperature converter (Celsius --> Fahrenheit)
@@ -41,3 +42,28 @@ def tempConverter():
         print(f"{temp}℉ = {result}℃")
     else:
         print("Entered wrong operation (set 'c' or 'f')")
+        tempConverter()
+
+
+# Student's grades average
+def gradesAverage():
+    numOfGrades = int(input('Enter number of grades: '))
+    sum = 0
+
+    for i in range(numOfGrades):
+        while True:
+            grade = int(input('Enter grade (1-6): '))
+
+            if grade < 1 or grade > 6:
+                continue
+            else:
+                sum += grade
+                break
+
+    average = sum / numOfGrades
+    print(f"Grades average: {average}")
+
+    if average > 3:
+        print('Student passed')
+    else:
+        print('Student failed')
